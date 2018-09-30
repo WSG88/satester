@@ -1,14 +1,12 @@
 # coding:utf-8  fxb_qzyx@163.com
 
-"""
-    爬取boss直聘
-"""
+
 import re
 import time
 from threading import Thread
 
 import requests
-from lxml import etree  # 使用xpath语法解析
+from lxml import etree
 from queue import Queue
 
 base_url = "https://www.zhipin.com"
@@ -17,17 +15,13 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36"
 }
 
-# 存储招聘信息的列表
 jobs_queue = Queue()
 
-# 创建存储url地址的队列
 url_queue = Queue()
 
-# 正则表达式：去掉标签中的<br/> 和 <em></em>标签，便于使用xpath解析提取文本
 regx_obj = re.compile(r'<br/>|<(em).*?>.*?</\1>')
 
 import json
-
 
 def save_file(name, item):
     fileObject = open(name, 'a+')
@@ -58,7 +52,6 @@ def send_request(url_path, headers, param=None):
 def parse_data():
     try:
         while True:
-            # 等待25s，超时则抛出异常
             detail_url = url_queue.get(timeout=25)
 
             html = send_request(detail_url, headers, param=None)
