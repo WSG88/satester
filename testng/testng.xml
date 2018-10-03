@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <suite name="firstsuite">
 
-  <test name="all_test">
-    <parameter name="DeviceName" value="H60-L01"/>
-    <parameter name="UDID" value="7N2SSE154L033031"/>
-    <parameter name="System_version" value="4.4.2"/>
+    <test name="all_test">
+        <parameter name="DeviceName" value="H60-L01"/>
+        <parameter name="UDID" value="7N2SSE154L033031"/>
+        <parameter name="System_version" value="4.4.2"/>
 
-    <parameter name="port" value="4723"/>
-    <parameter name="mobile" value="17302136038"/>
-    <parameter name="password" value="180205"/>
+        <parameter name="port" value="4723"/>
+        <parameter name="mobile" value="17302136038"/>
+        <parameter name="password" value="180205"/>
 
-    <classes>
-      <class name="utils.InitDriver"/>
-      <class name="tests.LoginTest"/>
-      <class name="tests.HomePageTest"/>
-      <class name="tests.SearchHouseTest"/>
-      <class name="tests.ScreenHouseTest"/>
-      <class name="tests.HouseDetailTest"/>
-      <class name="tests.PublishPostCase"/>
-      <class name="tests.ReleaseHouseTest"/>
-    </classes>
+        <classes>
+            <class name="utils.InitDriver"/>
+            <class name="tests.LoginTest"/>
+            <class name="tests.HomePageTest"/>
+            <class name="tests.SearchHouseTest"/>
+            <class name="tests.ScreenHouseTest"/>
+            <class name="tests.HouseDetailTest"/>
+            <class name="tests.PublishPostCase"/>
+            <class name="tests.ReleaseHouseTest"/>
+        </classes>
 
-  </test>
+    </test>
 
 
 </suite>

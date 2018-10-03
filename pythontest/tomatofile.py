@@ -4,13 +4,13 @@
 """
 ## 调用要使用的包
 import json
+import os
 import random
 import time
 from collections import Counter
 
 import jieba
 import matplotlib.pyplot as plt
-import os
 import pandas as pd
 import requests
 from pyecharts import Bar, Geo, Line, Overlap

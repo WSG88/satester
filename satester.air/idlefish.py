@@ -6,6 +6,7 @@ from airtest.core.api import *
 auto_setup(__file__)
 
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
+
 poco = AndroidUiautomationPoco(force_restart=False)
 # start your script here
 

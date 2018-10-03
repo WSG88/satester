@@ -1,6 +1,6 @@
 import csv
-
 import os
+
 from pyecharts import WordCloud
 
 
