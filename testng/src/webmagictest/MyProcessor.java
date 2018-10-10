@@ -1,3 +1,5 @@
+package webmagictest;
+
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;
@@ -8,11 +10,11 @@ public class MyProcessor implements PageProcessor {
   private Site site = Site.me().setRetryTimes(3).setSleepTime(100);
   private static int count = 0;
 
-  @Override public Site getSite() {
+  public Site getSite() {
     return site;
   }
 
-  @Override public void process(Page page) {
+  public void process(Page page) {
     //判断链接是否符合http://www.cnblogs.com/任意个数字字母-/p/7个数字.html格式
     if (!page.getUrl().regex("http://www.cnblogs.com/[a-z 0-9 -]+/p/[0-9]{7}.html").match()) {
       //加入满足条件的链接
