@@ -21,7 +21,7 @@ url_queue = Queue()
 
 regx_obj = re.compile(r'<br/>|<(em).*?>.*?</\1>')
 
-import json
+import test_json
 
 
 def save_file(name, item):
@@ -29,7 +29,7 @@ def save_file(name, item):
     a = fileObject.read()
     if len(a) == 0:
         fileObject.write("[")
-    jsObj = json.dumps(item)
+    jsObj = test_json.dumps(item)
     fileObject.write(jsObj)
     fileObject.write(",")
     fileObject.close()

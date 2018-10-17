@@ -2,7 +2,7 @@
 '''
 Project:读取mysql数据库的数据，转为json格式
 '''
-import json
+import test_json
 
 import MySQLdb
 
@@ -48,9 +48,9 @@ def TableToJson():
         # JSON采用完全独立于语言的文本格式，事实上大部分现代计算机语言都以某种形式支持它们。这使得一种数据格式在同样基于这些结构的编程语言之间交换成为可能。
         # json.dumps()是将原始数据转为json（其中单引号会变为双引号），而json.loads()是将json转为原始数据。
         print jsonData
-        jsondatar = json.dumps(jsonData, ensure_ascii=False)
+        jsondatar = test_json.dumps(jsonData, ensure_ascii=False)
         print jsondatar
-        jsondatar = json.dumps(jsonData)
+        jsondatar = test_json.dumps(jsonData)
         # 去除首尾的中括号
         return jsondatar[1:len(jsondatar) - 1]
 

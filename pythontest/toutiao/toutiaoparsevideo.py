@@ -1,7 +1,7 @@
 # -*- coding: utf8 -*-
 
 # http://www.jianshu.com/p/3559ad586c98
-import json
+import test_json
 
 import requests
 
@@ -45,7 +45,7 @@ re = requests.get(url + '?r=%s&s=%s' % (r, s))
 rj = re.json()
 print rj
 
-print(json.dumps(rj, indent=1))
+print(test_json.dumps(rj, indent=1))
 
 import base64
 

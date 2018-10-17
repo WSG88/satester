@@ -3,7 +3,7 @@
 西虹市首富
 """
 ## 调用要使用的包
-import json
+import test_json
 import os
 import random
 import time
@@ -37,7 +37,7 @@ for i in range(0, 1000):
         time.sleep(2)
         url = 'http://m.maoyan.com/mmdb/comments/movie/1212592.json?_v_=yes&offset=' + str(j)
         html = requests.get(url=url, cookies=cookie, headers=header).content
-        data = json.loads(html.decode('utf-8'))['cmts']
+        data = test_json.loads(html.decode('utf-8'))['cmts']
         for item in data:
             tomato = tomato.append({'date': item['time'].split(' ')[0], 'city': item['cityName'],
                                     'score': item['score'], 'comment': item['content'],

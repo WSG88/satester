@@ -5,7 +5,7 @@ import urllib
 
 reload(sys)
 sys.setdefaultencoding('utf8')
-import json
+import test_json
 
 import requests
 
@@ -32,7 +32,7 @@ print ''
 
 wbdata = requests.get(url).text
 
-data = json.loads(wbdata)
+data = test_json.loads(wbdata)
 news = data['data']
 
 for n in news:
