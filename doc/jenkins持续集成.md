@@ -26,3 +26,6 @@
         ssh -T git@github.com
         //运行结果出现类似如下
         Hi WSG88! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+java -jar jenkins.war --httpPort=8080
